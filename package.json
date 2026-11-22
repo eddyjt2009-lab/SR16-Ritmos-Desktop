@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Programador de ritmos inspirado en SR16",
   "main": "main.js",
-  "author": "SR16 Ritmos",
+  "author": {
+  "name": "SR16 Ritmos",
+  "email": "eddyjt2009@gmail.com"
+},
   "license": "UNLICENSED",
   "scripts": {
     "start": "electron .",
