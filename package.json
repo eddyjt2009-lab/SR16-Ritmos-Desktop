@@ -20,7 +20,8 @@
     "directories": { "output": "dist" },
     "win": {
       "target": ["nsis", "portable"],
-      "artifactName": "SR16-Ritmos-${version}-${target}.${ext}"
+      "artifactName": "SR16-Ritmos-${version}.${ext}"
+
     },
     "nsis": {
       "oneClick": false,
@@ -31,7 +32,8 @@
     "linux": {
       "target": ["AppImage", "deb"],
       "category": "AudioVideo",
-      "artifactName": "SR16-Ritmos-${version}-${target}.${ext}"
+      "artifactName": "SR16-Ritmos-${version}.${ext}"
+
     }
   }
 }
