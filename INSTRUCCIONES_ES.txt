@@ -1,0 +1,22 @@
+SR16 RITMOS — VERSIONES PARA WINDOWS Y LINUX
+
+Este paquete contiene la app HTML envuelta como aplicación de escritorio mediante Electron y un flujo de GitHub Actions para compilarla sin instalar programas en tu PC.
+
+1. En GitHub crea un repositorio NUEVO llamado SR16-Ritmos-Desktop. Para facilitar el uso gratuito de GitHub Actions, puedes dejarlo público. No subas contraseñas ni datos privados.
+2. Descomprime este paquete en tu PC.
+3. En el repositorio, usa Add file > Upload files y sube el CONTENIDO de esta carpeta (no el ZIP entero): index.html, main.js, package.json, INSTRUCCIONES_ES.txt y la carpeta .github.
+4. Pulsa Commit changes.
+5. Entra en Actions. Elige “Build SR16 Ritmos Desktop”. Pulsa Run workflow y confirma.
+6. Espera a que termine el flujo. En el resumen de la ejecución verás dos artefactos:
+   - SR16-Ritmos-Windows: contiene instalador .exe y versión portable .exe.
+   - SR16-Ritmos-Linux: contiene .AppImage y .deb.
+7. Descarga el artefacto de tu sistema operativo y extrae el ZIP.
+
+WINDOWS: usa el archivo que termina en .exe. El instalador NSIS permite elegir carpeta y crea accesos directos; la versión portable puede abrirse sin instalación. Windows podría mostrar una advertencia de SmartScreen porque es una aplicación personal sin firma comercial.
+
+LINUX MINT / UBUNTU: prueba primero el .AppImage. Si no arranca, clic derecho > Propiedades > Permisos > permitir ejecutar como programa; luego ábrelo. Alternativamente, instala el .deb haciendo doble clic si tu sistema ofrece instalador de paquetes.
+
+NOTAS:
+- Los archivos descargables de Actions se conservan 14 días; guarda una copia.
+- Esto empaqueta la aplicación existente; no cambia sus funciones ni garantiza compatibilidad con todas las versiones antiguas de Windows/Linux.
+- El proyecto no necesita acceso a internet para abrir la interfaz, pero algunas funciones internas podrían depender del soporte del navegador/Electron.

@@ -1,0 +1,37 @@
+{
+  "name": "sr16-ritmos",
+  "version": "1.0.0",
+  "description": "Programador de ritmos inspirado en SR16",
+  "main": "main.js",
+  "author": "SR16 Ritmos",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^35.0.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.sr16ritmos.desktop",
+    "productName": "SR16 Ritmos",
+    "files": ["index.html", "main.js", "package.json"],
+    "directories": { "output": "dist" },
+    "win": {
+      "target": ["nsis", "portable"],
+      "artifactName": "SR16-Ritmos-${version}-${target}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    },
+    "linux": {
+      "target": ["AppImage", "deb"],
+      "category": "AudioVideo",
+      "artifactName": "SR16-Ritmos-${version}-${target}.${ext}"
+    }
+  }
+}
